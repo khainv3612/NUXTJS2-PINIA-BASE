@@ -1,0 +1,142 @@
+#toast {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 999999;
+  @media only screen and (max-width: 500px) {
+    right: 15px;
+    left: 15px;
+    .toast {
+      max-width: 100% !important;
+      min-width: unset !important;
+    }
+  }
+
+  .toast {
+    display: flex;
+    align-items: center;
+    background-color: $color-white;
+    min-width: 420px;
+    max-width: 420px;
+    border-left: 4px solid;
+    transition: all linear 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    animation: slideInLeft ease .3s, fadeOut linear 1s 1000s forwards
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(calc(100% + 32px));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
+  }
+
+  .toast__icon {
+    width: 48px;
+    min-height: 100%;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .toast--success {
+    border-color: #00C508;
+
+    .toast__icon {
+      background: #DDF7E0;
+    }
+
+    .toast__title {
+      color: #00C508 !important;
+    }
+  }
+
+  .toast--info {
+    border-color: #2E73FA;
+
+    .toast__icon {
+      background: #DAE9FF;
+    }
+
+    .toast__title {
+      color: #2E73FA !important;
+    }
+  }
+
+  .toast--warning {
+    border-color: #FF9300;
+
+    .toast__icon {
+      background: #FFF3CC;
+    }
+
+    .toast__title {
+      color: #FF9300 !important;
+    }
+  }
+
+  .toast--error {
+    border-color: #FF4D4F;
+
+    .toast__icon {
+      background: #FFDCE4;
+    }
+
+    .toast__title {
+      color: #FF4A4A !important;
+    }
+  }
+
+  .toast + .toast {
+    margin-top: 24px;
+  }
+
+  .toast__close {
+    padding: 0 16px;
+    cursor: pointer;
+    @media only screen and (max-width: 500px) {
+      padding: 0 10px;
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  .toast__body {
+    flex-grow: 1;
+    padding: 12px;
+    @media only screen and (max-width: 500px) {
+      padding: 10px 0 10px 10px;
+    }
+  }
+
+  .toast__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  .toast__msg {
+    font-size: 14px;
+    color: #011627;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+}

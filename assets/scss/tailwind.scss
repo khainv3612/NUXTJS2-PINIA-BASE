@@ -1,0 +1,106 @@
+@tailwind base;
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+.root,
+:root,
+#root,
+#docs-root {
+  --color-emerald-700: #13926E;
+  --color-emerald-500: #47B475;
+  --color-emerald-200: #E2E8F0;
+  --color-emerald-50: #CAEAD7;
+  --color-green-500: #22C55E;
+  --color-gray-800: #1F2937;
+  --color-gray-600: #4B5563;
+  --color-gray-500: #6B7280;
+  --color-gray-400: #9CA3AF;
+  --color-gray-300: #D1D5DB;
+  --color-gray-100: #F3F4F6;
+  --color-white: #FFFFFF;
+  --color-amber-500: #F59E0B;
+  --color-red-600: #DC2626;
+  --color-red-500: #EF4444;
+  --color-red-200: #FECACA;
+  --color-blue-500: #3B82F6;
+  //size
+  --font-size-6xl: 64px;
+  --font-size-5xl: 48px;
+  --font-size-4xl: 32px;
+  --font-size-3xl: 28px;
+  --font-size-2xl: 24px;
+  --font-size-xl: 20px;
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-base: 14px;
+  --font-size-s: 12px;
+  --font-size-xs: 10px;
+  //bold
+  --font-weight-xl : 700;
+  --font-weight-l: 600;
+  --font-weight-m: 500;
+  --font-weight-base: 400;
+  //line-height
+  --font-height-base: 1.2;
+  --font-height-150: 1.5;
+  --font-height-custom: 22px;
+  --font-height-24: 24px;
+  //font- style
+  --font-style-normal: Normal;
+  --font-style-underline: Underline;
+// size
+  --size-2xl: 64px;
+  --size-xl: 48px;
+  --size-l: 40px;
+  --size-m: 32px;
+  --size-s: 24px;
+  --size-xs: 12px;
+//  radius
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+  --radius-rounded-m: 5px;
+  --radius-rounded-s: 3px;
+  --radius-sharp: 0;
+  --radius-5px: 5px;
+
+//   width
+  --min-width-milkdown-editor: 848px;
+  --max-width-milkdown-editor: 848px;
+  --max-width-milkdown-editor-content: calc(var(--max-width-milkdown-editor) - 2 * 3rem);
+
+//  padding
+  --padding-icon-editor: 43.5px;
+
+//  height
+  --height-header: 57px;
+  --max-height-summary: calc(100vh - 40px - 24px - var(--height-header) - 88px);
+  --height-top-summary: calc(24px + var(--height-header));
+
+//  decoration
+  --underline: 'text-decoration-line: underline'
+}
+//@layer base {
+//  h1 {
+//    @apply text-heading-01;
+//  }
+// h2{
+//   @apply text-heading-02;
+// }
+//  h3{
+//    @apply text-heading-03;
+//  }
+//  body {
+//    @apply text-body-02  #{!important} ;
+//    font-feature-settings: 'pnum' on, 'lnum' on;
+//  }
+//}
