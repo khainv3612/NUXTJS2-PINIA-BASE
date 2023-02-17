@@ -7,17 +7,17 @@ export const getters = {}
 export const mutations = {}
 
 export const actions = {
-  test(context) {
-    return new Promise((resolve, reject) => {
-      handleApi(resolve, reject, this.$axios.get(`/master-data`), context)
-    })
-  },
+	test(context) {
+		return new Promise((resolve, reject) => {
+			handleApi(resolve, reject, this.$axios.get(`/master-data`), context)
+		})
+	},
 }
 
 export default {
-  namespaced: true,
-  state,
-  getters,
-  mutations,
-  actions
+	namespaced: true,
+	state,
+	getters,
+	mutations,
+	actions,
 }
