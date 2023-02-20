@@ -8,7 +8,7 @@
 		"build": "nuxt build",
 		"start": "nuxt start",
 		"generate": "nuxt generate",
-		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+		"lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore --ignore-path .eslintignore",
 		"lint:prettier": "prettier --write  '**/*.{js,ts,jsx,tsx,css,less,scss,vue,html,md}'",
 		"lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
 		"lint:lint-staged": "lint-staged",
@@ -16,7 +16,7 @@
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx,vue,html}": [
-			"eslint . --ext .vue,.js,.jsx,.ts,.tsx,.html --fix --ignore-path .gitignore",
+			"eslint . --ext .vue,.js,.jsx,.ts,.tsx,.html --fix --ignore-path .gitignore --ignore-path .eslintignore",
 			"prettier --write  '**/*.{js,ts,jsx,tsx,vue,html,md}'",
 			"stylelint --cache --fix \"**/*.{vue}\" --cache --cache-location node_modules/.cache/stylelint/"
 		],
